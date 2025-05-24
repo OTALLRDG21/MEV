@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+    <style>
+        html{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(135deg, #4c6ef5 5%, #34d8ee 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.EntrarCadastrar{
+    float: right;
+    margin-right: 10px;
+    margin-top: -40px;
+    width: 40%;
+    text-align: right;
+}
+
+header{
+    width: 100%;
+    height: 1.2cm;
+    background: linear-gradient(135deg, #34d8ee 5%, #4c6ef5 100%);
+    align-items: center;
+    height: 2cm;
+    margin:0px;
+    top: 0;
+    z-index: 1000;
+
+}
+
+header h1{
+    padding-left: 10px;
+    float: left;
+    width: 20%;
+    font-size: 1cm;
+    color: white;
+}
+
+nav{
+    padding: 0.5cm;
+}
+
+.HomeSobreNos{
+    text-align: right;
+    width: 40%;
+}
+
+header li{
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    margin-bottom:0;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+li a:hover {
+    background-color:white;
+    color: black;
+}
+
+ul a{
+    color: white;
+}
+
+main{
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+    background-color:white;
+}
+
+.Sessao1{
+    background: linear-gradient(135deg, #34d8ee 5%, #4c6ef5 100%);
+    float: left;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+.Titulo{
+    margin-top: 0.7cm;
+    font-size: 1cm;
+}
+.Titulo2{
+    margin-top: 0.7cm;
+    font-size: 0.7cm;
+}
+.Titulo3{
+    margin-top: 0.7cm;
+    font-size: 0.5cm;
+    margin-bottom: 0.7cm;
+}
+.Logotipo{
+    color: white;
+}
+
+.Logotipo span{
+    color: rgb(27, 26, 27);
+}
+.Sessao2{
+    padding: 5px;
+    height: 40%;
+}
+.Sessao2-titulo{
+    padding: 10px;
+    text-align: center;
+}
+.Conjunto-das-salas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.Tela-Sala {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.Tela-Sala:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.Cabeca-da-Sala {
+    background: linear-gradient(135deg, #34d8ee 5%, #4c6ef5 100%);
+    padding: 1.5rem;
+    font-size: 0.7cm;
+    font-weight: bold;
+}
+
+.Corpo-da-Sala {
+    padding: 1.5rem;
+}
+
+.Descricao-da-Sala {
+    margin-bottom: 1.5rem;
+    color:grey;
+    text-indent: left;
+}
+
+
+.Accao-Sala {
+    margin-top: 1rem;
+}
+
+.Sessao3-titulo{
+    text-align: center;
+}
+.Conjunto-de-Passos {
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.Corpo-do-Passo {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 1cm;
+
+}
+
+.Passo-Icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(96, 216, 216);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1cm;
+    margin: 0 auto 0.8cm;
+}
+
+.Titulo-Passo-a-seguir {
+    margin-bottom: 0.5cm;
+    font-size: 0.5cm;
+}
+
+.step-description {
+    color: gray;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    padding-top: 1cm;
+    height: 20%;
+}
+
+.footer-Conteudos{
+    display: flex;
+    gap: 1cm;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-coluna {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-titulo {
+    font-size: 0.6cm;
+    margin-bottom: 0.7cm;
+}
+
+.footer-links li {
+    margin-bottom: 0.4cm;
+}
+
+.footer-links a {
+    color: rgb(97, 87, 87);
+}
+#titulo{
+    color: rgb(97, 87, 87);
+}
+.footer-links a:hover {
+    color:black;
+    text-decoration: underline;
+    background-color: rgb(96, 216, 216);
+}
+
+.links-Redes-sociais {
+    display: flex;
+    gap: 0.5cm;
+    margin-top: 0.5cm;
+    margin-left: 0.5cm;
+}
+
+.footer-link-img{
+    height: 35px;
+    width: 35px;
+}
+.Redes-sociais {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(100, 178, 241);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Redes-sociais:hover {
+    transform: translateY(-3px);
+}
+ .copyright {
+            text-align: center;
+            color:gray;
+            margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .Titulo {
+        font-size: 1.1cm;
+    }
+}
+@media only screen and (max-width:600px){
+    header nav{
+        float: left;
+        text-align:center;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+                 <h1 class="Logotipo">M<span>E</span>V</h1>
+            <nav class="HomeSobreNos">
+                <ul>
+                    <li><a href="Tela-inicial.html">Home</a></li>
+                    <li><a href="">Sobre Nós</a></li>
+                </ul>
+            </nav>
+                <div class="EntrarCadastrar">
+                    <ul>
+                        <li><a href="">Entrar</a></li>
+                        <li><a href="">Cadastrar</a></li>
+                    </ul>
+                </div>
+    </header>
+
+    <main>
+        <section class="Sessao1">
+            <div>
+                <h1 class="Titulo">Compartilhe conhecimento, aprenda com outros como você</h1>
+                <p class="Titulo2">Conheça pessoas com interesses semelhantes e participe de discussões ao vivo. 
+                </p>
+                <p class="Titulo3">Publica os teus trabalhos, não importa qual seja.</p>
+            </div>
+        </section>
+ 
+        <section class="Sessao2">
+            <div class="Conjunto-Principal">
+                <h2 class="Sessao2-titulo">Salas que tu podes conversar</h2>
+                <div class="Conjunto-das-salas">
+                    <div class="Tela-Sala">
+                        <div class="Cabeca-da-Sala">Programação</div>
+                        <div class="Corpo-da-Sala">
+                            <p class="Descricao-da-Sala">Participe da conversa ao vivo sobre código, frameworks e desenvolvimento de software.
+                            </p>                                
+                            <div class="Accao-Sala">
+                                <a href=" " style="width: 100%;">Entrar na Sala</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Tela-Sala">
+                        <div class="Cabeca-da-Sala">Ciência</div>
+                        <div class="Corpo-da-Sala">
+                            <p class="Descricao-da-Sala">Junte-se às conversas sobre pesquisa, descobertas científicas e inovações.</p>
+                            <div class="Accao-Sala">
+                                <a href="" style="width: 100%;">Entrar na Sala</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Tela-Sala">
+                        <div class="Cabeca-da-Sala">Negócios</div>
+                        <div class="Corpo-da-Sala">
+                            <p class="Descricao-da-Sala">Discuta ideias, estratégias e tendências de mercado com outros usuários.
+                            </p>
+                            
+                            <div class="Accao-Sala">
+                                <a href=" " style="width: 100%;">Entrar na Sala</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Tela-Sala">
+                        <div class="Cabeca-da-Sala">Saúde</div>
+                        <div class="Corpo-da-Sala">
+                            <p class="Descricao-da-Sala">Dê ideias de como a tua área de formação
+                                beneficia a sociedade, e muito mais.
+                            </p>                                
+                            <div class="Accao-Sala">
+                                <a href=" " style="width: 100%;">Entrar na Sala</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Tela-Sala">
+                        <div class="Cabeca-da-Sala">Electrecidade</div>
+                        <div class="Corpo-da-Sala">
+                            <p class="Descricao-da-Sala">Converse com muitos sobre: energias
+                                Hiolica, energias renováveis, energia solar, tudo quanto você entende sobre Electrecidade.</p>
+                            
+                            <div class="Accao-Sala">
+                                <a href="" style="width: 100%;">Entrar na Sala</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Tela-Sala">
+                        <div class="Cabeca-da-Sala">Literatura</div>
+                        <div class="Corpo-da-Sala">
+                            <p class="Descricao-da-Sala">Fale sobre livros de conhecimento científico, Romance,
+                                Aventuras, Teologia, Acção, e dê sugestões
+                                de como a Literatura vem ajudar-nos em muitos aspéctos .</p>
+                            
+                            <div class="Accao-Sala">
+                                <a href=" " style="width: 100%;">Entrar na Sala</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Sessao3">
+            <div>
+                <h2 class="Sessao3-titulo">Como Funciona?</h2>
+                <div class="Conjunto-de-Passos">
+                    <div class="Corpo-do-Passo">
+                        <div class="Passo-Icon">1</div>
+                        <h3 class="Titulo-Passo-a-seguir">Crie uma conta gratuita</h3>
+                        <p class="step-description">Cadastre-se rapidamente de uma forma fácil e eficiente.</p><br>
+                        <a href="../HTML/Cadastrar.html">Cadastrar-me agora</a>
+                    </div>
+
+                    <div class="Corpo-do-Passo">
+                        <div class="Passo-Icon">2</div>
+                        <h3 class="Titulo-Passo-a-seguir">Entre em uma sala de conversas</h3>
+                        <p class="step-description">Escolha entre as diversas áreas ou inicie sua própria sala de discussão.</p>
+                    </div>
+
+                    <div class="Corpo-do-Passo">
+                        <div class="Passo-Icon">3</div>
+                        <h3 class="Titulo-Passo-a-seguir">Compartilhe e aprenda</h3>
+                        <p class="step-description">Compartilhe dúvidas, ideias e aprenda com a comunidade em tempo real.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-Conteudos">
+            <div class="footer-coluna">
+                <h3 class="footer-titulo">MEV</h3>
+                <p id="titulo">Uma plataforma para compartilhar conhecimento e conectar pessoas com interesses semelhantes.</p>
+                <div class="links-Redes-sociais">
+                    <a href="https://www.instagram.com" class="Redes-sociais" class="Instagram">
+                        <img src="../img/Instagram.jfif" alt="Instagram" class="footer-link-img">
+                    </a>
+                    <a href="https://www.linkdin.com" class="Redes-sociais" class="linkdin">
+                        <img src="../img/Linkin.png" alt="Linkdin" class="footer-link-img">
+                    </a>
+                    <a href="https://www.twitter.com" class="Redes-sociais" class="twitter">
+                        <img src="../img/Twiter.png" alt="twitter" class="footer-link-img">
+                    </a>
+                    <a href="https://www.facebook.com" class="Redes-sociais" class="facebook">
+                        <img src="../img/Facebook.jfif" alt="Facebook" class="footer-link-img">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-coluna">
+                <h3 class="footer-titulo">Legal</h3>
+                <ul class="footer-links">
+                    <li><a href=" ">Termos de uso</a></li>
+                    <li><a href=" ">Política de privacidade</a></li>
+                    <li><a href=" ">Diretrizes da comunidade</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-coluna">
+                <h3 class="footer-titulo">Contato</h3>
+                <ul class="footer-links">
+                    <li><a href=" ">Suporte</a></li>
+                    <li><a href=" ">Parceria</a></li>
+                    <li><a href=" ">contato@mev.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 MEV. Todos os direitos reservados.
+        </div>
+    </footer>
+</body>
+</html>
